@@ -1,0 +1,304 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="和光 evolution">
+  <title>和光·0806 文章归档</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <button class="brand" id="homeButton" type="button" aria-label="返回文章目录">
+      <span class="brand-mark" aria-hidden="true"></span>
+      <span id="brandName">和光</span>
+      <small>ARCHIVE</small>
+    </button>
+
+    <div class="topbar-actions">
+      <label class="search-box">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m21 21-4.35-4.35m2.35-5.65a8 8 0 1 1-16 0 8 8 0 0 1 16 0Z"/></svg>
+        <input id="searchInput" type="search" placeholder="搜索文章、正文或标签" autocomplete="off">
+        <kbd>Ctrl K</kbd>
+      </label>
+      <button class="icon-button" id="themeToggle" type="button" aria-label="切换主题" aria-pressed="false">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M4.93 4.93l1.42 1.42m11.3 11.3 1.42 1.42M2 12h2m16 0h2M4.93 19.07l1.42-1.42m11.3-11.3 1.42-1.42"/></svg>
+      </button>
+      <button class="settings-button" id="settingsButton" type="button" aria-haspopup="dialog"><span aria-hidden="true">⚙</span> 设置</button>
+      <button class="icon-button mobile-menu-button" id="mobileMenuButton" type="button" aria-label="打开筛选栏" aria-expanded="false">☰</button>
+      <button class="primary-button" id="newEntryButton" type="button"><span>＋</span> 新建文章</button>
+    </div>
+  </header>
+
+  <div class="app-shell">
+    <aside class="left-sidebar" id="sidebar">
+      <section class="profile-card">
+        <div class="avatar">光</div>
+        <div>
+          <h2 id="profileName">和光 evolution</h2>
+          <p id="profileBio">人生日志 0806 记录归档</p>
+        </div>
+      </section>
+
+      <nav class="main-nav" aria-label="文章筛选">
+        <button class="nav-item active" type="button" data-filter="all"><span class="nav-icon">⌘</span>全部文章<span class="nav-count" id="allCount">0</span></button>
+        <button class="nav-item" type="button" data-filter="favorites"><span class="nav-icon">♡</span>我的收藏<span class="nav-count" id="favoriteCount">0</span></button>
+        <button class="nav-item" type="button" data-filter="images"><span class="nav-icon">▧</span>影像文章<span class="nav-count" id="imageCount">0</span></button>
+        <button class="nav-item" type="button" data-filter="trash"><span class="nav-icon">♲</span>回收站<span class="nav-count" id="trashCount">0</span></button>
+      </nav>
+
+      <section class="sidebar-edit-control" aria-label="网页本地编辑模式">
+        <button class="edit-mode-button" id="editModeButton" type="button" aria-pressed="false">
+          <span class="nav-icon" aria-hidden="true">✎</span>
+          <span id="editModeLabel">编辑</span>
+          <small id="editModeStatus">已锁定</small>
+        </button>
+        <p id="editModeHint">修改只保存在当前浏览器；公开发布请上传 Markdown。</p>
+      </section>
+
+      <section class="sidebar-section">
+        <div class="section-heading"><strong>标签</strong><button class="text-button" id="clearTagButton" type="button">清除</button></div>
+        <div class="sidebar-tags" id="sidebarTags"></div>
+      </section>
+
+      <section class="sidebar-section archive-section">
+        <div class="section-heading"><strong>年份归档</strong><span id="yearTotal"></span></div>
+        <div class="year-list" id="yearList"></div>
+      </section>
+
+      <footer class="sidebar-footer">
+        <span class="status-dot"></span>
+        <span>内容已从 Notion 完整归档</span>
+      </footer>
+    </aside>
+
+    <main class="main-content">
+      <section class="catalog-page" id="catalogPage">
+        <header class="catalog-hero">
+          <div>
+            <p class="eyebrow editable-copy" id="heroEyebrow" data-copy-key="eyebrow" contenteditable="false" spellcheck="false">PERSONAL ARCHIVE · 2011—2026</p>
+            <h1 class="editable-copy" id="heroTitle" data-copy-key="heroTitle" contenteditable="false" spellcheck="false">心 流 号 空 间 站</h1>
+            <p class="hero-copy editable-copy" id="heroCopy" data-copy-key="heroCopy" contenteditable="false">我的时空旅行日志</p>
+          </div>
+          <div class="archive-stats" id="archiveStats" aria-label="归档统计">
+            <div><strong id="articleTotal">0</strong><span>篇文章</span></div>
+            <div><strong id="photoTotal">0</strong><span>张图片</span></div>
+            <div><strong id="yearSpan">0</strong><span>年跨度</span></div>
+          </div>
+        </header>
+
+        <div class="catalog-toolbar">
+          <div class="tag-bar" id="tagBar" aria-label="标签筛选"></div>
+          <p id="resultSummary">全部文章</p>
+        </div>
+
+        <div class="article-grid" id="articleGrid"></div>
+        <div class="empty-catalog" id="emptyCatalog" hidden>
+          <span>⌕</span>
+          <h2>没有找到匹配的文章</h2>
+          <p>试试其他关键词，或清除当前筛选。</p>
+          <button class="secondary-button" id="resetFiltersButton" type="button">清除筛选</button>
+        </div>
+      </section>
+
+      <section class="article-page" id="articlePage" hidden>
+        <div class="reader-shell">
+          <div class="reader-toolbar">
+            <button class="ghost-button" id="backButton" type="button"><span>←</span> 返回目录</button>
+            <div class="save-state"><span class="status-dot"></span><span id="saveStatus">所有更改已保存</span></div>
+            <div class="reader-actions">
+              <button class="small-icon-button" type="button" data-command="bold" title="加粗"><b>B</b></button>
+              <button class="small-icon-button italic" type="button" data-command="italic" title="斜体">I</button>
+              <button class="small-icon-button" type="button" data-command="insertUnorderedList" title="列表">☷</button>
+              <button class="small-icon-button" id="favoriteButton" type="button" title="收藏" aria-pressed="false">♡</button>
+              <button class="small-icon-button" id="moreButton" type="button" title="更多" aria-expanded="false">•••</button>
+              <div class="action-menu" id="actionMenu">
+                <button id="restoreButton" type="button">恢复文章</button>
+                <button id="changeDateButton" type="button">修改日期</button>
+                <button id="duplicateButton" type="button">复制文章</button>
+                <button id="exportButton" type="button">导出文本</button>
+                <button class="danger-action" id="deleteButton" type="button">移到回收站</button>
+              </div>
+            </div>
+          </div>
+
+          <article class="reader-article">
+            <header class="article-header">
+              <div class="article-kicker">
+                <time id="articleDate"></time>
+                <span>·</span>
+                <a id="sourceLink" href="#" target="_blank" rel="noopener noreferrer">查看原文 ↗</a>
+              </div>
+              <h1 class="editable article-title" data-field="title" contenteditable="false" spellcheck="false"></h1>
+              <div class="article-tags" id="articleTags"></div>
+            </header>
+
+            <div class="editable article-body" id="articleBody" data-field="body" contenteditable="false"></div>
+            <section class="photo-import-panel" id="photoImportPanel" aria-labelledby="photoImportTitle">
+              <div>
+                <span>
+                  <strong id="photoImportTitle">日志照片</strong>
+                  <small id="photoImportHint">请先解锁编辑模式后导入照片。</small>
+                </span>
+                <label class="photo-import-button" id="photoImportButton">
+                  <span aria-hidden="true">＋</span> 导入照片
+                  <input id="photoInput" type="file" accept="image/*" multiple disabled>
+                </label>
+              </div>
+              <p>支持一次选择多张图片；照片会保存在当前浏览器中，并自动显示在文章和首页卡片里。</p>
+            </section>
+            <div class="image-gallery" id="imageGallery"></div>
+
+            <footer class="article-footer">
+              <div class="article-origin">
+                <span>归档来源</span>
+                <p>内容整理自公开记录，图片已保存为本地资源。</p>
+              </div>
+              <button class="secondary-button" id="addTagButton" type="button">＋ 添加标签</button>
+            </footer>
+          </article>
+
+          <nav class="article-navigation" aria-label="上一篇和下一篇">
+            <button id="previousArticle" type="button"><span>上一篇</span><strong></strong></button>
+            <button id="nextArticle" type="button"><span>下一篇</span><strong></strong></button>
+          </nav>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <button class="mobile-backdrop" id="mobileBackdrop" type="button" aria-label="关闭筛选栏"></button>
+
+  <dialog class="confirm-dialog" id="confirmDialog" aria-labelledby="confirmTitle" aria-describedby="confirmMessage">
+    <div class="confirm-icon" aria-hidden="true">!</div>
+    <h2 id="confirmTitle">确认操作</h2>
+    <p id="confirmMessage"></p>
+    <div class="confirm-actions">
+      <button class="secondary-button" id="confirmCancelButton" type="button">取消</button>
+      <button class="danger-button" id="confirmActionButton" type="button">确认</button>
+    </div>
+  </dialog>
+
+  <dialog class="settings-sheet" id="settingsDialog" aria-labelledby="settingsTitle">
+    <div class="settings-header">
+      <div>
+        <p>SHADCN/UI</p>
+        <h2 id="settingsTitle">网站设置</h2>
+        <span>所有选择会即时预览并保存在当前浏览器。</span>
+      </div>
+      <button class="sheet-close" id="closeSettingsButton" type="button" aria-label="关闭设置">×</button>
+    </div>
+
+    <div class="settings-tabs" role="tablist" aria-label="设置分类">
+      <button class="active" type="button" role="tab" aria-selected="true" data-settings-tab="content">内容</button>
+      <button type="button" role="tab" aria-selected="false" data-settings-tab="appearance">外观</button>
+      <button type="button" role="tab" aria-selected="false" data-settings-tab="layout">布局</button>
+    </div>
+
+    <div class="settings-body">
+      <section class="settings-panel active" data-settings-panel="content">
+        <div class="settings-group">
+          <div class="settings-group-title"><strong>首页文字</strong><span>Input / Textarea</span></div>
+          <label class="settings-field"><span>品牌名称</span><input type="text" data-copy-input="brandName" maxlength="30"></label>
+          <label class="settings-field"><span>侧栏名称</span><input type="text" data-copy-input="profileName" maxlength="40"></label>
+          <label class="settings-field"><span>侧栏简介</span><input type="text" data-copy-input="profileBio" maxlength="80"></label>
+          <label class="settings-field"><span>眉标题</span><input type="text" data-copy-input="eyebrow" maxlength="80"></label>
+          <label class="settings-field"><span>首页主标题</span><textarea data-copy-input="heroTitle" rows="3" maxlength="120"></textarea></label>
+          <label class="settings-field"><span>首页说明</span><textarea data-copy-input="heroCopy" rows="3" maxlength="180"></textarea></label>
+        </div>
+        <div class="settings-note" id="contentEditHint">文字当前已锁定。请先点击左侧边栏的“编辑”。</div>
+      </section>
+
+      <section class="settings-panel" data-settings-panel="appearance">
+        <div class="settings-group">
+          <div class="settings-group-title"><strong>视觉样式</strong><span>shadcn/create</span></div>
+          <div class="choice-grid style-choices" data-setting-control="style">
+            <button type="button" data-value="vega"><i></i><strong>Vega</strong><span>经典均衡</span></button>
+            <button type="button" data-value="nova"><i></i><strong>Nova</strong><span>精简紧凑</span></button>
+            <button type="button" data-value="maia"><i></i><strong>Maia</strong><span>柔和圆润</span></button>
+            <button type="button" data-value="lyra"><i></i><strong>Lyra</strong><span>方正锐利</span></button>
+            <button type="button" data-value="mira"><i></i><strong>Mira</strong><span>高密界面</span></button>
+          </div>
+        </div>
+
+        <div class="settings-group">
+          <div class="settings-group-title"><strong>基础色</strong><span>Base Color</span></div>
+          <div class="swatch-grid" data-setting-control="baseColor">
+            <button type="button" data-value="neutral"><i style="--swatch:#737373"></i>Neutral</button>
+            <button type="button" data-value="stone"><i style="--swatch:#78716c"></i>Stone</button>
+            <button type="button" data-value="zinc"><i style="--swatch:#71717a"></i>Zinc</button>
+            <button type="button" data-value="mauve"><i style="--swatch:#746d76"></i>Mauve</button>
+            <button type="button" data-value="olive"><i style="--swatch:#6f7667"></i>Olive</button>
+            <button type="button" data-value="mist"><i style="--swatch:#667078"></i>Mist</button>
+            <button type="button" data-value="taupe"><i style="--swatch:#756f6a"></i>Taupe</button>
+          </div>
+        </div>
+
+        <div class="settings-group split-settings">
+          <label class="settings-field"><span>主题模式</span><select data-setting-select="appearance"><option value="system">跟随系统</option><option value="light">浅色</option><option value="dark">深色</option></select></label>
+          <label class="settings-field"><span>强调色</span><select data-setting-select="accent"><option value="neutral">Neutral</option><option value="blue">Blue</option><option value="green">Green</option><option value="orange">Orange</option><option value="rose">Rose</option><option value="violet">Violet</option></select></label>
+          <label class="settings-field"><span>圆角</span><select data-setting-select="radius"><option value="none">None</option><option value="sm">Small</option><option value="md">Medium</option><option value="lg">Large</option><option value="full">Rounded</option></select></label>
+          <label class="settings-field"><span>字号</span><select data-setting-select="fontScale"><option value="sm">Small</option><option value="md">Default</option><option value="lg">Large</option></select></label>
+        </div>
+
+        <div class="settings-group">
+          <div class="settings-group-title"><strong>标题字号</strong><span>Typography</span></div>
+          <div class="range-list">
+            <label><span>顶部品牌标题 <output data-setting-output="brandTitleSize">14 px</output></span><input type="range" min="11" max="24" step="1" data-setting-range="brandTitleSize"></label>
+            <label><span>首页眉标题 <output data-setting-output="eyebrowTitleSize">10 px</output></span><input type="range" min="8" max="18" step="1" data-setting-range="eyebrowTitleSize"></label>
+            <label><span>首页主标题 <output data-setting-output="heroTitleSize">56 px</output></span><input type="range" min="28" max="84" step="1" data-setting-range="heroTitleSize"></label>
+            <label><span>文章卡片标题 <output data-setting-output="cardTitleSize">15 px</output></span><input type="range" min="12" max="28" step="1" data-setting-range="cardTitleSize"></label>
+            <label><span>文章页面标题 <output data-setting-output="articleTitleSize">52 px</output></span><input type="range" min="28" max="76" step="1" data-setting-range="articleTitleSize"></label>
+            <label><span>正文二级标题 <output data-setting-output="contentH2Size">24 px</output></span><input type="range" min="18" max="40" step="1" data-setting-range="contentH2Size"></label>
+            <label><span>正文三级标题 <output data-setting-output="contentH3Size">19 px</output></span><input type="range" min="16" max="32" step="1" data-setting-range="contentH3Size"></label>
+            <label><span>侧栏与模块标题 <output data-setting-output="sidebarTitleSize">13 px</output></span><input type="range" min="10" max="22" step="1" data-setting-range="sidebarTitleSize"></label>
+            <label><span>弹窗与空状态标题 <output data-setting-output="panelTitleSize">18 px</output></span><input type="range" min="14" max="30" step="1" data-setting-range="panelTitleSize"></label>
+          </div>
+        </div>
+      </section>
+
+      <section class="settings-panel" data-settings-panel="layout">
+        <div class="settings-group split-settings">
+          <label class="settings-field"><span>目录列数</span><select data-setting-select="columns"><option value="2">2 列</option><option value="3">3 列</option><option value="4">4 列</option></select></label>
+          <label class="settings-field"><span>内容密度</span><select data-setting-select="density"><option value="compact">Compact</option><option value="default">Default</option><option value="comfortable">Comfortable</option></select></label>
+          <label class="settings-field"><span>侧栏宽度</span><select data-setting-select="sidebarWidth"><option value="compact">Compact</option><option value="default">Default</option><option value="wide">Wide</option></select></label>
+          <label class="settings-field"><span>图片比例</span><select data-setting-select="imageRatio"><option value="landscape">Landscape</option><option value="square">Square</option><option value="portrait">Portrait</option></select></label>
+          <label class="settings-field"><span>卡片样式</span><select data-setting-select="cardVariant"><option value="outline">Outline</option><option value="elevated">Elevated</option><option value="flat">Flat</option></select></label>
+          <label class="settings-field"><span>按钮变体</span><select data-setting-select="buttonVariant"><option value="default">Default</option><option value="outline">Outline</option><option value="secondary">Secondary</option><option value="ghost">Ghost</option></select></label>
+        </div>
+
+        <div class="settings-group toggle-list">
+          <label><span><strong>显示首页统计</strong><small>Switch</small></span><input type="checkbox" role="switch" data-setting-toggle="showStats"></label>
+          <label><span><strong>显示卡片摘要</strong><small>Switch</small></span><input type="checkbox" role="switch" data-setting-toggle="showExcerpts"></label>
+          <label><span><strong>顶部栏吸顶</strong><small>Switch</small></span><input type="checkbox" role="switch" data-setting-toggle="stickyHeader"></label>
+        </div>
+      </section>
+    </div>
+
+    <footer class="settings-footer">
+      <button class="secondary-button" id="resetSettingsButton" type="button">恢复默认</button>
+      <span id="settingsSaveState">设置已保存</span>
+      <button class="primary-button" id="doneSettingsButton" type="button">完成</button>
+    </footer>
+  </dialog>
+
+  <dialog class="lightbox" id="lightbox">
+    <button id="closeLightbox" type="button" aria-label="关闭图片预览">×</button>
+    <img id="lightboxImage" alt="">
+    <p id="lightboxCaption"></p>
+  </dialog>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script src="articles.js"></script>
+  <script src="diaries-2010.js"></script>
+  <script src="diaries-2022-04-05.js"></script>
+  <script src="wechat-articles.js"></script>
+  <script src="custom-entries.js"></script>
+  <script src="markdown-articles.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
