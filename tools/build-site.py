@@ -4,6 +4,7 @@
 from __future__ import annotations
 
 import argparse
+import hashlib
 import html
 import json
 import posixpath
@@ -263,10 +264,23 @@ def copy_site(root: Path, output: Path, entries: list[dict]) -> None:
     if not assets.is_dir():
         raise FileNotFoundError(f"Required assets directory not found: {assets}")
     shutil.copytree(assets, output / "assets")
-    (output / "markdown-articles.js").write_text(
+    bundle = (
         "window.BLOG_MARKDOWN_ARTICLES = "
         + json.dumps(entries, ensure_ascii=False, indent=2)
-        + ";\n",
+        + ";\n"
+    )
+    (output / "markdown-articles.js").write_text(
+        bundle,
+        encoding="utf-8",
+        newline="\n",
+    )
+    bundle_version = hashlib.sha256(bundle.encode("utf-8")).hexdigest()[:12]
+    index_path = output / "index.html"
+    index_path.write_text(
+        index_path.read_text(encoding="utf-8").replace(
+            'src="markdown-articles.js"',
+            f'src="markdown-articles.js?v={bundle_version}"',
+        ),
         encoding="utf-8",
         newline="\n",
     )
