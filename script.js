@@ -90,6 +90,12 @@ const importedArticles = [
   ...(Array.isArray(window.BLOG_MARKDOWN_ARTICLES) ? window.BLOG_MARKDOWN_ARTICLES : [])
 ];
 const RETIRED_ENTRY_IDS = new Set(["notion-LucjeixzG"]);
+const DEFAULT_ARTICLE_IMAGE = Object.freeze({
+  src: "assets/posts/interstellar-library.png",
+  thumb: "assets/thumbs/interstellar-library-thumb.jpg",
+  alt: "《星际穿越》书架与摄影机",
+  inline: false
+});
 const toast = $("#toast");
 const saveStatus = $("#saveStatus");
 const bodyField = $("#articleBody");
@@ -218,6 +224,7 @@ function normalizeEntry(raw = {}) {
   const timestamp = new Date().toISOString();
   const date = parseDate(raw.date) ? raw.date : localDateString();
   const body = sanitizeRichHtml(raw.body);
+  const images = normalizeImages(raw.images);
   return {
     id: String(raw.id || makeId()),
     date,
@@ -225,7 +232,7 @@ function normalizeEntry(raw = {}) {
     summary: stripHtml(raw.summary).trim(),
     body,
     text: stripHtml(raw.text || body),
-    images: normalizeImages(raw.images),
+    images: images.length ? images : [{ ...DEFAULT_ARTICLE_IMAGE }],
     tags: uniqueTags(raw.tags),
     bottom: Boolean(raw.bottom),
     source: /^https?:\/\//i.test(String(raw.source || "")) ? String(raw.source) : "",
@@ -550,7 +557,9 @@ function loadEntries() {
           .filter((entry) => !RETIRED_ENTRY_IDS.has(entry.id))
           .map((entry) => {
             const bundled = bundledById.get(entry.id);
-            return bundled ? { ...entry, tags: bundled.tags, bottom: bundled.bottom } : entry;
+            return bundled
+              ? { ...entry, title: bundled.title, tags: bundled.tags, bottom: bundled.bottom }
+              : entry;
           });
         const savedIds = new Set(savedEntries.map((entry) => entry.id));
         return [
