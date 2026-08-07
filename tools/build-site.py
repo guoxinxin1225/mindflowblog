@@ -274,16 +274,18 @@ def copy_site(root: Path, output: Path, entries: list[dict]) -> None:
         encoding="utf-8",
         newline="\n",
     )
-    bundle_version = hashlib.sha256(bundle.encode("utf-8")).hexdigest()[:12]
     index_path = output / "index.html"
-    index_path.write_text(
-        index_path.read_text(encoding="utf-8").replace(
-            'src="markdown-articles.js"',
-            f'src="markdown-articles.js?v={bundle_version}"',
-        ),
-        encoding="utf-8",
-        newline="\n",
-    )
+    index_source = index_path.read_text(encoding="utf-8")
+    versioned_assets = [
+        name for name in SITE_FILES if Path(name).suffix in {".css", ".js"}
+    ] + ["markdown-articles.js"]
+    for asset_name in versioned_assets:
+        digest = hashlib.sha256((output / asset_name).read_bytes()).hexdigest()[:12]
+        index_source = index_source.replace(
+            f'"{asset_name}"',
+            f'"{asset_name}?v={digest}"',
+        )
+    index_path.write_text(index_source, encoding="utf-8", newline="\n")
     (output / ".nojekyll").write_text("", encoding="utf-8")
 
 
