@@ -219,21 +219,6 @@ window.BLOG_ARTICLES = [
     "deletedAt": null
   },
   {
-    "id": "LucjeixzG",
-    "date": "2022-05-22",
-    "title": "今天出于xxx原因 把刚续费的vpn卸载了 是以为记",
-    "body": "<p>今天出于xxx原因 把刚续费的vpn卸载了 是以为记</p>",
-    "text": "今天出于xxx原因 把刚续费的vpn卸载了 是以为记",
-    "images": [],
-    "tags": [
-      "日常"
-    ],
-    "source": "https://weibo.com/1961268671/LucjeixzG",
-    "notion": "https://app.notion.com/p/3b2836f1654681e7ae00dd31222f4102",
-    "favorite": false,
-    "deletedAt": null
-  },
-  {
     "id": "LofRugtV0",
     "date": "2022-04-13",
     "title": "分享图片",
@@ -294,14 +279,13 @@ window.BLOG_ARTICLES = [
     "text": "2012五一训练：三，意生身·菩萨具备的境界\n2012五一训练：作者：觉普法师三，意生身·菩萨具备的境界意生身就是不假借父母因缘，纯属于心意业力所化现的无实质（粗重物质）光色身。一期生命到另一期生命的中阴身、劫初之人（觉明为咎，一念有我而",
     "images": [],
     "tags": [
-      "修行",
-      "学习",
-      "分享"
+      "ZenPrictice"
     ],
     "source": "https://weibo.com/1961268671/Lkb8m39Wo",
     "notion": "https://app.notion.com/p/3b2836f1654681368daec11102626c3a",
     "favorite": false,
-    "deletedAt": null
+    "deletedAt": null,
+    "bottom": true
   },
   {
     "id": "Lkb0d1cND",
@@ -311,13 +295,13 @@ window.BLOG_ARTICLES = [
     "text": "【問禪寮】净慧长老禅七开示系列：怎样起疑情\n怎样起疑情参禅首先要选好一个公案，接着就是起疑情。本来在禅宗发展的起始并没有参公案一说，只是到了后来，人的根性变钝了，不得已才借助公案的参究来达到见性的目的。《六祖坛经》讲得很清楚，“直指人心，见性成",
     "images": [],
     "tags": [
-      "修行",
-      "分享"
+      "ZenPrictice"
     ],
     "source": "https://weibo.com/1961268671/Lkb0d1cND",
     "notion": "https://app.notion.com/p/3b2836f1654681d9b1fde42a2360c081",
     "favorite": false,
-    "deletedAt": null
+    "deletedAt": null,
+    "bottom": true
   },
   {
     "id": "IqXvV660K",
@@ -386,13 +370,13 @@ window.BLOG_ARTICLES = [
     "text": "上师瑜珈：安住于见地之中/究给企谦仁波切_阿明藏博客 网页链接",
     "images": [],
     "tags": [
-      "修行",
-      "分享"
+      "ZenPrictice"
     ],
     "source": "https://weibo.com/1961268671/Fz0zVadwP",
     "notion": "https://app.notion.com/p/3b2836f16546815c824efdd23e13f9a8",
     "favorite": false,
-    "deletedAt": null
+    "deletedAt": null,
+    "bottom": true
   },
   {
     "id": "FdLOlgVeD",
@@ -450,12 +434,13 @@ window.BLOG_ARTICLES = [
     "text": "包括大手印和大圆满在内，所有的心地系统的禅修传统，都是强调禅修时要高度保持清晰和警觉，而不是一般人想的所谓“完全遗失觉察，陷入一种状态”，也不是一般人想的“打坐的时间越长越好”，反而是反而强调打坐安住时的高质量，尤其在行者心地熏习的初期，不但要求尽量少时多次，而且还要求当发觉有“打坐感觉很舒服”的细微分别时，还需要主动打断以断除对于所谓禅悦的贪执。总之，心地法门的禅修，强调的是清晰觉察和远离贪执，而不是进状态、堆时间。",
     "images": [],
     "tags": [
-      "修行"
+      "ZenPrictice"
     ],
     "source": "https://weibo.com/1961268671/F4L5zcJ9Y",
     "notion": "https://app.notion.com/p/3b2836f1654681f49ca1f29d23db7722",
     "favorite": false,
-    "deletedAt": null
+    "deletedAt": null,
+    "bottom": true
   },
   {
     "id": "F37rTqLs1",
@@ -566,13 +551,13 @@ window.BLOG_ARTICLES = [
     "text": "大手印禅修觉受次第/明就仁波切_阿明藏博客 网页链接",
     "images": [],
     "tags": [
-      "修行",
-      "分享"
+      "ZenPrictice"
     ],
     "source": "https://weibo.com/1961268671/EFyumAlhK",
     "notion": "https://app.notion.com/p/3b2836f16546811798aed62894ee9f14",
     "favorite": false,
-    "deletedAt": null
+    "deletedAt": null,
+    "bottom": true
   },
   {
     "id": "EFyCxnCBx",
@@ -582,13 +567,13 @@ window.BLOG_ARTICLES = [
     "text": "禅修其实是一种不带评论的觉知过程/明就仁波切_阿明藏博客 网页链接",
     "images": [],
     "tags": [
-      "修行",
-      "分享"
+      "ZenPrictice"
     ],
     "source": "https://weibo.com/1961268671/EFyCxnCBx",
     "notion": "https://app.notion.com/p/3b2836f1654681f5b9b4db0d369bc0c3",
     "favorite": false,
-    "deletedAt": null
+    "deletedAt": null,
+    "bottom": true
   },
   {
     "id": "EEwlJFM2M",
@@ -598,13 +583,13 @@ window.BLOG_ARTICLES = [
     "text": "冈波巴：大手印禅修十二阶段/直贡澈赞法王讲解\n冈波巴：大手印禅修十二阶段/直贡澈赞法王讲解 冈波巴：大手印禅修十二阶段/直贡澈赞法王讲解 弟子则应坚守对死与无常的觉知，以出离心故，入于修道。应能认识具德上师就是薄伽梵在世间的亲身化现。故修行想要成功，或真正的修行之始，必须具德上师与具器弟子相遇。",
     "images": [],
     "tags": [
-      "修行",
-      "分享"
+      "ZenPrictice"
     ],
     "source": "https://weibo.com/1961268671/EEwlJFM2M",
     "notion": "https://app.notion.com/p/3b2836f16546814f93dae46bc318c144",
     "favorite": false,
-    "deletedAt": null
+    "deletedAt": null,
+    "bottom": true
   },
   {
     "id": "EDJP98ddv",
@@ -614,12 +599,13 @@ window.BLOG_ARTICLES = [
     "text": "开始先修彻却，也就是立断。其修法与噶举派大手印是一个法。大手印把我们的本性比做一个大手，尽虚空遍法界。比如孙悟空一个跟头可以翻十万八千里，但翻来翻去还是跳不出如来佛的手掌心。我们的心量就是如此之大，这就是我们的佛性。修大手印就是要证成三空相应，也就是要明心见性。三空就是指内虚空、外虚空和密虚空。内虚空就是指要把我们的身体化空。外虚空就是指身体外的空间。密虚空就是指我们的本性，即佛性。我们的佛性本来是空，本来就没有东西。没有什么男女老少，青黄赤白。但它又不是断灭空，不是一点东西都没有，而是灵妙真心，就是妙有。妙有者，有而不有，不有而有，无相可见。所以它具有很大的功能，很大的能量。我们将内虚空、外虚空、密虚空化为一体时，就是一个大空。这个大空并不是一点知觉都没有，而是了了分明，灵知了了。这就是彻却界，即大手印。大手印的三要素就是见、定、行。就是要做到见、定、行三合一。我们首先要见地正确，要明白什么是我们的本性。知道本性是一切众生都具有的，它不生不灭，不增不减，不垢不净，不动不摇。这样就知道这个世界上的所有东西都是虚妄不实的，我们只要把自己所执著的一切东西都放下，恢复我们活活泼泼的本性就成就了。所以见地正确就有了定力。因为我们知道外面的色、声、香、味、触、法都是假的，都是不值钱的稻草，就不再著相了。有了佛性这个大宝贝就不要外面的稻草了。我们最珍贵的佛性，在佛经上被誉为摩尼宝珠，能予众宝。它能生出一切东西来。我们的心安定了，行为就能合拍，这就是瑜伽，即相应。假如我们说的是一套，做的是另一套那就不行，因为我们的行为没有修上去。所以行就是指要能真正证到。",
     "images": [],
     "tags": [
-      "修行"
+      "ZenPrictice"
     ],
     "source": "https://weibo.com/1961268671/EDJP98ddv",
     "notion": "https://app.notion.com/p/3b2836f16546817997deee6d5bdceb69",
     "favorite": false,
-    "deletedAt": null
+    "deletedAt": null,
+    "bottom": true
   },
   {
     "id": "EDr5tgHbl",
@@ -629,13 +615,13 @@ window.BLOG_ARTICLES = [
     "text": "临终中阴母子光明相会修持的开示/创古仁波切_阿明藏博客 网页链接",
     "images": [],
     "tags": [
-      "修行",
-      "分享"
+      "ZenPrictice"
     ],
     "source": "https://weibo.com/1961268671/EDr5tgHbl",
     "notion": "https://app.notion.com/p/3b2836f1654681f0b4c6f930788f093d",
     "favorite": false,
-    "deletedAt": null
+    "deletedAt": null,
+    "bottom": true
   },
   {
     "id": "ED7GiBM4z",
@@ -707,13 +693,13 @@ window.BLOG_ARTICLES = [
     "text": "迫尔基活佛超度弟子往生实录/阿明_阿明藏博客 网页链接",
     "images": [],
     "tags": [
-      "修行",
-      "分享"
+      "ZenPrictice"
     ],
     "source": "https://weibo.com/1961268671/ED7FleFpf",
     "notion": "https://app.notion.com/p/3b2836f16546814db7bdd53fd0ae413d",
     "favorite": false,
-    "deletedAt": null
+    "deletedAt": null,
+    "bottom": true
   },
   {
     "id": "EtFmxqQng",
@@ -723,13 +709,13 @@ window.BLOG_ARTICLES = [
     "text": "无法反驳的“自觉现量”—自体验/竹清嘉措仁波切_阿明藏博客 网页链接",
     "images": [],
     "tags": [
-      "修行",
-      "分享"
+      "ZenPrictice"
     ],
     "source": "https://weibo.com/1961268671/EtFmxqQng",
     "notion": "https://app.notion.com/p/3b2836f16546815ca70cdfccd6f2f479",
     "favorite": false,
-    "deletedAt": null
+    "deletedAt": null,
+    "bottom": true
   },
   {
     "id": "EtF7ntd3k",
@@ -739,13 +725,13 @@ window.BLOG_ARTICLES = [
     "text": "『心性见地仅是理解是不够的/扎西南嘉仁波切_阿明藏博客』网页链接",
     "images": [],
     "tags": [
-      "修行",
-      "分享"
+      "ZenPrictice"
     ],
     "source": "https://weibo.com/1961268671/EtF7ntd3k",
     "notion": "https://app.notion.com/p/3b2836f165468141b033cbf4f2b4529b",
     "favorite": false,
-    "deletedAt": null
+    "deletedAt": null,
+    "bottom": true
   },
   {
     "id": "EppyyCZMK",
@@ -910,13 +896,13 @@ window.BLOG_ARTICLES = [
     "text": "分享自清静本然《\\[转载\\]三量与境界（觉普法师）转载》 - 原文地址：三量与境界（觉普法师）转载作者： 小李       平时经常有人跟我说，打坐又坐出朵花了，修行身心又有什么境界了...  (来自 @头条博客)\n\\[转载\\]三量与境界（觉普法师）转载\n原文地址：三量与境界（觉普法师）转载作者： 小李平时经常有人跟我说，打坐又坐出朵花了，修行身心又有什么境界了，我一看到就晕了。因为这个问题，没有修行到一定程度，很难明白，即使讲清楚，听者也未必听得明",
     "images": [],
     "tags": [
-      "修行",
-      "分享"
+      "ZenPrictice"
     ],
     "source": "https://weibo.com/1961268671/D41We5GkX",
     "notion": "https://app.notion.com/p/3b2836f1654681a6bd3af6f391e55127",
     "favorite": false,
-    "deletedAt": null
+    "deletedAt": null,
+    "bottom": true
   },
   {
     "id": "Cym8m42Q0",
@@ -954,14 +940,13 @@ window.BLOG_ARTICLES = [
       }
     ],
     "tags": [
-      "修行",
-      "学习",
-      "影像"
+      "ZenPrictice"
     ],
     "source": "https://weibo.com/1961268671/BoGAzCTWT",
     "notion": "https://app.notion.com/p/3b2836f1654681958294d070a9595dd5",
     "favorite": false,
-    "deletedAt": null
+    "deletedAt": null,
+    "bottom": true
   },
   {
     "id": "AkxuHEJLJ",
@@ -1024,11 +1009,12 @@ window.BLOG_ARTICLES = [
     "text": "#十轮经 经文段落背诵# 修习入出息观。便能随顺观五取蕴。所以者何。如是入息出息自性。名色取蕴。如是入息出息领纳。名受取蕴。如是入息出息取相。名想取蕴。如是入息出息造作。名行取蕴。如是入息出息了别。名识取蕴。",
     "images": [],
     "tags": [
-      "修行"
+      "ZenPrictice"
     ],
     "source": "https://weibo.com/1961268671/a418VL",
     "notion": "https://app.notion.com/p/3b2836f1654681ae9207ccb599b435ca",
     "favorite": false,
-    "deletedAt": null
+    "deletedAt": null,
+    "bottom": true
   }
 ];

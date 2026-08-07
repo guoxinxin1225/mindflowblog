@@ -89,6 +89,7 @@ const importedArticles = [
   ...(Array.isArray(window.BLOG_LOCAL_ENTRIES) ? window.BLOG_LOCAL_ENTRIES : []),
   ...(Array.isArray(window.BLOG_MARKDOWN_ARTICLES) ? window.BLOG_MARKDOWN_ARTICLES : [])
 ];
+const RETIRED_ENTRY_IDS = new Set(["notion-LucjeixzG"]);
 const toast = $("#toast");
 const saveStatus = $("#saveStatus");
 const bodyField = $("#articleBody");
@@ -226,6 +227,7 @@ function normalizeEntry(raw = {}) {
     text: stripHtml(raw.text || body),
     images: normalizeImages(raw.images),
     tags: uniqueTags(raw.tags),
+    bottom: Boolean(raw.bottom),
     source: /^https?:\/\//i.test(String(raw.source || "")) ? String(raw.source) : "",
     notion: /^https?:\/\//i.test(String(raw.notion || "")) ? String(raw.notion) : "",
     favorite: Boolean(raw.favorite),
@@ -537,12 +539,19 @@ function loadEntries() {
     createdAt: article.createdAt || `${article.date}T12:00:00.000Z`,
     updatedAt: article.updatedAt || `${article.date}T12:00:00.000Z`
   }));
+  const bundledById = new Map(bundledEntries.map((entry) => [entry.id, entry]));
   const raw = safeGet(APP_KEY);
   if (raw !== null) {
     try {
       const saved = JSON.parse(raw);
       if (Array.isArray(saved.entries)) {
-        const savedEntries = saved.entries.map(normalizeEntry);
+        const savedEntries = saved.entries
+          .map(normalizeEntry)
+          .filter((entry) => !RETIRED_ENTRY_IDS.has(entry.id))
+          .map((entry) => {
+            const bundled = bundledById.get(entry.id);
+            return bundled ? { ...entry, tags: bundled.tags, bottom: bundled.bottom } : entry;
+          });
         const savedIds = new Set(savedEntries.map((entry) => entry.id));
         return [
           ...savedEntries,
@@ -671,7 +680,11 @@ function activeEntries() {
 }
 
 function sortedEntries(entries) {
-  return [...entries].sort((a, b) => b.date.localeCompare(a.date) || b.updatedAt.localeCompare(a.updatedAt));
+  return [...entries].sort((a, b) =>
+    Number(a.bottom) - Number(b.bottom)
+    || b.date.localeCompare(a.date)
+    || b.updatedAt.localeCompare(a.updatedAt)
+  );
 }
 
 function filteredEntries() {

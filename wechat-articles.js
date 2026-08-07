@@ -299,13 +299,13 @@ window.BLOG_WECHAT_ARTICLES = [
       }
     ],
     "tags": [
-      "微信",
-      "修行"
+      "ZenPrictice"
     ],
     "source": "https://mp.weixin.qq.com/s/MRUvbW2oXDEGu3MAOSs8eA",
     "notion": "",
     "favorite": false,
-    "deletedAt": null
+    "deletedAt": null,
+    "bottom": true
   },
   {
     "id": "wechat-2247483890-4",
@@ -321,13 +321,13 @@ window.BLOG_WECHAT_ARTICLES = [
       }
     ],
     "tags": [
-      "微信",
-      "修行"
+      "ZenPrictice"
     ],
     "source": "https://mp.weixin.qq.com/s/xVrXfFCM8PCiGOjYeU_umQ",
     "notion": "",
     "favorite": false,
-    "deletedAt": null
+    "deletedAt": null,
+    "bottom": true
   },
   {
     "id": "wechat-2247483890-3",
@@ -343,13 +343,13 @@ window.BLOG_WECHAT_ARTICLES = [
       }
     ],
     "tags": [
-      "微信",
-      "修行"
+      "ZenPrictice"
     ],
     "source": "https://mp.weixin.qq.com/s/UApUK0IvvzdAtVmZ1BhbEA",
     "notion": "",
     "favorite": false,
-    "deletedAt": null
+    "deletedAt": null,
+    "bottom": true
   },
   {
     "id": "wechat-2247483890-2",
@@ -365,13 +365,13 @@ window.BLOG_WECHAT_ARTICLES = [
       }
     ],
     "tags": [
-      "微信",
-      "修行"
+      "ZenPrictice"
     ],
     "source": "https://mp.weixin.qq.com/s/Twn8zLYX6GoRf_IjKYoXXw",
     "notion": "",
     "favorite": false,
-    "deletedAt": null
+    "deletedAt": null,
+    "bottom": true
   },
   {
     "id": "wechat-2247483890-1",
@@ -387,13 +387,13 @@ window.BLOG_WECHAT_ARTICLES = [
       }
     ],
     "tags": [
-      "微信",
-      "修行"
+      "ZenPrictice"
     ],
     "source": "https://mp.weixin.qq.com/s/2plJPMzHKw9KOXV4ML2OJA",
     "notion": "",
     "favorite": false,
-    "deletedAt": null
+    "deletedAt": null,
+    "bottom": true
   },
   {
     "id": "wechat-2247483881-4",
@@ -409,13 +409,13 @@ window.BLOG_WECHAT_ARTICLES = [
       }
     ],
     "tags": [
-      "微信",
-      "修行"
+      "ZenPrictice"
     ],
     "source": "https://mp.weixin.qq.com/s/NWems_rFnUbMgVnEW7azcw",
     "notion": "",
     "favorite": false,
-    "deletedAt": null
+    "deletedAt": null,
+    "bottom": true
   },
   {
     "id": "wechat-2247483881-3",
@@ -431,13 +431,13 @@ window.BLOG_WECHAT_ARTICLES = [
       }
     ],
     "tags": [
-      "微信",
-      "修行"
+      "ZenPrictice"
     ],
     "source": "https://mp.weixin.qq.com/s/wVfK12jH3bPQix5Oat5BcQ",
     "notion": "",
     "favorite": false,
-    "deletedAt": null
+    "deletedAt": null,
+    "bottom": true
   },
   {
     "id": "wechat-2247483881-2",
@@ -453,13 +453,13 @@ window.BLOG_WECHAT_ARTICLES = [
       }
     ],
     "tags": [
-      "微信",
-      "修行"
+      "ZenPrictice"
     ],
     "source": "https://mp.weixin.qq.com/s/vw_6MEsIlF_rcXZA9aLH6g",
     "notion": "",
     "favorite": false,
-    "deletedAt": null
+    "deletedAt": null,
+    "bottom": true
   },
   {
     "id": "wechat-2247483881-1",
@@ -475,13 +475,13 @@ window.BLOG_WECHAT_ARTICLES = [
       }
     ],
     "tags": [
-      "微信",
-      "修行"
+      "ZenPrictice"
     ],
     "source": "https://mp.weixin.qq.com/s/EymXGuYR1lStXvkwLCl1ZA",
     "notion": "",
     "favorite": false,
-    "deletedAt": null
+    "deletedAt": null,
+    "bottom": true
   },
   {
     "id": "wechat-2247483873-1",
@@ -497,13 +497,13 @@ window.BLOG_WECHAT_ARTICLES = [
       }
     ],
     "tags": [
-      "微信",
-      "修行"
+      "ZenPrictice"
     ],
     "source": "https://mp.weixin.qq.com/s/0ux_o3YcOdoHBovF_DQ6BQ",
     "notion": "",
     "favorite": false,
-    "deletedAt": null
+    "deletedAt": null,
+    "bottom": true
   },
   {
     "id": "wechat-2247483867-6",
@@ -519,13 +519,13 @@ window.BLOG_WECHAT_ARTICLES = [
       }
     ],
     "tags": [
-      "微信",
-      "修行"
+      "ZenPrictice"
     ],
     "source": "https://mp.weixin.qq.com/s/w16UZETwK4zkNhSPDOCQcw",
     "notion": "",
     "favorite": false,
-    "deletedAt": null
+    "deletedAt": null,
+    "bottom": true
   },
   {
     "id": "wechat-2247483867-5",
@@ -541,13 +541,13 @@ window.BLOG_WECHAT_ARTICLES = [
       }
     ],
     "tags": [
-      "微信",
-      "修行"
+      "ZenPrictice"
     ],
     "source": "https://mp.weixin.qq.com/s/0YYzUsDNQ62R6Sf0UYpcyQ",
     "notion": "",
     "favorite": false,
-    "deletedAt": null
+    "deletedAt": null,
+    "bottom": true
   },
   {
     "id": "wechat-2247483867-4",
@@ -563,13 +563,13 @@ window.BLOG_WECHAT_ARTICLES = [
       }
     ],
     "tags": [
-      "微信",
-      "修行"
+      "ZenPrictice"
     ],
     "source": "https://mp.weixin.qq.com/s/NOCpYwc614KHo5uPpj67cA",
     "notion": "",
     "favorite": false,
-    "deletedAt": null
+    "deletedAt": null,
+    "bottom": true
   },
   {
     "id": "wechat-2247483867-3",
@@ -585,13 +585,13 @@ window.BLOG_WECHAT_ARTICLES = [
       }
     ],
     "tags": [
-      "微信",
-      "修行"
+      "ZenPrictice"
     ],
     "source": "https://mp.weixin.qq.com/s/83Z27wZsriYd0U8STgsjwg",
     "notion": "",
     "favorite": false,
-    "deletedAt": null
+    "deletedAt": null,
+    "bottom": true
   },
   {
     "id": "wechat-2247483867-2",
@@ -607,13 +607,13 @@ window.BLOG_WECHAT_ARTICLES = [
       }
     ],
     "tags": [
-      "微信",
-      "修行"
+      "ZenPrictice"
     ],
     "source": "https://mp.weixin.qq.com/s/szNVobno_HFxfIZIrzDVxQ",
     "notion": "",
     "favorite": false,
-    "deletedAt": null
+    "deletedAt": null,
+    "bottom": true
   },
   {
     "id": "wechat-2247483867-1",
@@ -629,13 +629,13 @@ window.BLOG_WECHAT_ARTICLES = [
       }
     ],
     "tags": [
-      "微信",
-      "修行"
+      "ZenPrictice"
     ],
     "source": "https://mp.weixin.qq.com/s/D6R83-PON4jKAD2CtIBptA",
     "notion": "",
     "favorite": false,
-    "deletedAt": null
+    "deletedAt": null,
+    "bottom": true
   },
   {
     "id": "wechat-2247483849-2",
@@ -676,13 +676,13 @@ window.BLOG_WECHAT_ARTICLES = [
       }
     ],
     "tags": [
-      "微信",
-      "修行"
+      "ZenPrictice"
     ],
     "source": "https://mp.weixin.qq.com/s/CLTN5l7kpF98wuaeiIL5ww",
     "notion": "",
     "favorite": false,
-    "deletedAt": null
+    "deletedAt": null,
+    "bottom": true
   },
   {
     "id": "wechat-2247483849-1",
@@ -878,13 +878,13 @@ window.BLOG_WECHAT_ARTICLES = [
       }
     ],
     "tags": [
-      "微信",
-      "修行"
+      "ZenPrictice"
     ],
     "source": "https://mp.weixin.qq.com/s/qDkcqbtJPe9PDXZf4LGASg",
     "notion": "",
     "favorite": false,
-    "deletedAt": null
+    "deletedAt": null,
+    "bottom": true
   },
   {
     "id": "wechat-2247483806-1",
@@ -1050,13 +1050,13 @@ window.BLOG_WECHAT_ARTICLES = [
       }
     ],
     "tags": [
-      "微信",
-      "修行"
+      "ZenPrictice"
     ],
     "source": "https://mp.weixin.qq.com/s/bzfIbIfWiXFeyomMZswA2w",
     "notion": "",
     "favorite": false,
-    "deletedAt": null
+    "deletedAt": null,
+    "bottom": true
   },
   {
     "id": "wechat-2247483756-1",
@@ -1167,13 +1167,13 @@ window.BLOG_WECHAT_ARTICLES = [
       }
     ],
     "tags": [
-      "微信",
-      "修行"
+      "ZenPrictice"
     ],
     "source": "https://mp.weixin.qq.com/s/Gyyl4NoLhsau-uoLIDRZbQ",
     "notion": "",
     "favorite": false,
-    "deletedAt": null
+    "deletedAt": null,
+    "bottom": true
   },
   {
     "id": "wechat-2247483721-4",
@@ -1234,13 +1234,13 @@ window.BLOG_WECHAT_ARTICLES = [
       }
     ],
     "tags": [
-      "微信",
-      "修行"
+      "ZenPrictice"
     ],
     "source": "https://mp.weixin.qq.com/s/EjUol0RwGIAhNdEh5IfJ7g",
     "notion": "",
     "favorite": false,
-    "deletedAt": null
+    "deletedAt": null,
+    "bottom": true
   },
   {
     "id": "wechat-2247483721-1",
@@ -1256,13 +1256,13 @@ window.BLOG_WECHAT_ARTICLES = [
       }
     ],
     "tags": [
-      "微信",
-      "修行"
+      "ZenPrictice"
     ],
     "source": "https://mp.weixin.qq.com/s/EOMVWTx4b8pD1QnZVMQFKg",
     "notion": "",
     "favorite": false,
-    "deletedAt": null
+    "deletedAt": null,
+    "bottom": true
   },
   {
     "id": "wechat-2247483692-4",
@@ -1348,13 +1348,13 @@ window.BLOG_WECHAT_ARTICLES = [
       }
     ],
     "tags": [
-      "微信",
-      "修行"
+      "ZenPrictice"
     ],
     "source": "https://mp.weixin.qq.com/s/y-DkqVVuSLcDkQ_ZpMTQcg",
     "notion": "",
     "favorite": false,
-    "deletedAt": null
+    "deletedAt": null,
+    "bottom": true
   },
   {
     "id": "wechat-2247483656-1",
@@ -1375,12 +1375,12 @@ window.BLOG_WECHAT_ARTICLES = [
       }
     ],
     "tags": [
-      "微信",
-      "修行"
+      "ZenPrictice"
     ],
     "source": "https://mp.weixin.qq.com/s/BwFNvOxwwqcgw5Dhyq6FIA",
     "notion": "",
     "favorite": false,
-    "deletedAt": null
+    "deletedAt": null,
+    "bottom": true
   }
 ];
